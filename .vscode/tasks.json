@@ -1,0 +1,49 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Prune Docker",
+            "type": "shell",
+            "command": "docker system prune -a --volumes -f",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "detail": "Removes all unused containers, networks, volumes, images, and caches."
+        },
+        {
+            "label": "Build Docker server and start",
+            "type": "shell",
+            "command": "docker-compose -f ${workspaceFolder}/development/docker-compose.yml up --build -d",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Starts the Docker containers and builds the images."
+        },
+        {
+            "label": "Stop Docker Server",
+            "type": "shell",
+            "command": "docker-compose -f ${workspaceFolder}/development/docker-compose.yml down",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "detail": "Stops the Docker containers."
+        },
+        {
+            "label": "Rebuild Docker and start",
+            "type": "shell",
+            "command": "docker-compose -f ${workspaceFolder}/development/docker-compose.yml down; docker-compose -f ${workspaceFolder}/development/docker-compose.yml up --build -d",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "detail": "Rebuilds the Docker containers, including running the SQL scripts for the database."
+        }
+    ]
+}

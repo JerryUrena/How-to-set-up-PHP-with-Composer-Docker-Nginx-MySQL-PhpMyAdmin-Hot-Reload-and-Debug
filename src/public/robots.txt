@@ -1,0 +1,6 @@
+# read more: https://www.robotstxt.org/
+
+# Disable all search engine robots because this is a server application.
+# Robots will not be able to index any files or routes within this server app.
+User-agent: *
+Disallow: /

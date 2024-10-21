@@ -1,0 +1,11 @@
+{
+    "name": "php/phptest",
+    "description": "",
+    "license": "",
+    "autoload": {
+        "psr-4": {
+            "Src\\": "src/"
+        }
+    },
+    "authors": []
+}

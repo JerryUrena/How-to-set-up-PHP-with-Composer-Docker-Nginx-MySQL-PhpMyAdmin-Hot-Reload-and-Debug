@@ -1,0 +1,6 @@
+{
+    "php.validate.executablePath": "/usr/local/bin/php",
+    "editor.formatOnSave": true,
+    "files.autoSave": "onFocusChange"
+  }
+  
